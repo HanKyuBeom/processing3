@@ -1,0 +1,31 @@
+int x = 300;
+int y = 200;
+int dirX = 1;
+int dirY = 1;
+
+void setup() {
+  size(1600, 800);
+}
+
+void draw() {
+background(255);
+
+fill(255, 0, 0);
+
+ellipse(x, y, 50, 50);
+x = x + dirX;
+
+
+
+if(x > width || x < 0) {
+dirX *=-1;
+}
+if(y > height || y < 0) {
+dirY *=-1;
+}
+x = (x + dirX);
+y = (y + dirY);
+
+println(x, y);
+
+}
