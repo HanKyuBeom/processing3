@@ -1,0 +1,31 @@
+boolean button = false;
+
+int x;
+int y;
+int z;
+int h = 200;
+int w = 200;
+
+void setup(){
+  size(600,600);
+  x = width/2;
+  y = height/2;
+}
+
+void draw(){
+  if (button == true){
+    background(255,0,0);
+  }else{
+    background(0,0,255);
+  }
+  fill(0,255,0);
+  noStroke();
+  rectMode(CENTER);
+  rect(x, y, w, h);
+}
+void mousePressed(){
+ if(mouseX > width/2-w/2 && mouseX < width/2+w/2 
+ && mouseY > height/2-h/2 && mouseY < height/2+h/2){
+   button = !button;
+ }
+}
