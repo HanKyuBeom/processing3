@@ -1,0 +1,10 @@
+int x = 5;
+
+println("x is now :" + x);
+if (x==5){
+  x = 6;
+
+else if (x == 6){ //else if는 위의 if와 같은 한 덩어리로 취급한다. 그러므로 위의 if가 만족되면 밑의 else if는 무시된다.
+  x = 5;
+}
+println("x is now :" + x);
