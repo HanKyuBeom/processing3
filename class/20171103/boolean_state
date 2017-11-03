@@ -1,0 +1,21 @@
+int x;
+boolean button = false;
+
+void setup(){
+  size(600,600);
+}
+
+void draw(){
+  x = width/2;
+  
+  if (button == true){
+    background(255,0,0);
+  } else if (button == false) {
+    background(0,255,0);
+  }
+
+ if(mouseX < x){
+  button = true;
+ }else if(mouseX > x){
+   button = false;
+}}
